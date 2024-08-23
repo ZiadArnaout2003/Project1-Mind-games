@@ -1,0 +1,97 @@
+body
+{
+  background-color: white;
+}
+.Logo
+{ 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+h1
+{
+  color: rgb(229, 229, 162);
+  font-size: 100px;
+  font-weight:150px ;
+}
+/* End of Header */
+.Game-comment-section
+{
+  display: flex;
+  justify-content:center;
+  align-items: stretch;
+  gap: 30px;
+  margin: 20px;
+}
+/* Description */
+.description h2
+{
+  color: rgb(229, 200, 162);
+  font-size: 40px;
+  text-decoration: underline;
+}
+.description p
+{ font-size: 30px;
+  color: rgb(229, 229, 162);
+}
+/* GRID */
+.grid
+{ margin-left: 170px;
+  display: grid;
+  grid-template-columns:repeat(4, 150px);
+  grid-template-rows: repeat(4, 150px);    
+  grid-gap: 10px;
+ 
+}
+.grid>div
+{
+  background-color: rgb(229, 229, 162);
+ 
+}
+.grid>div:hover
+{
+  cursor:pointer;
+}
+aside
+{   
+    background-color:rgb(229, 200, 162); 
+    padding: 10px;
+    
+}
+footer {
+  height: 100px;
+  background-color: rgb(229, 229, 162);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.quick-links ul {
+  display: flex;
+  gap: 20px; /* Use gap to control spacing between items */
+  list-style-type: none;
+  /* margin: 0; Remove default margin */
+  /* padding: 0; Remove default padding */
+}
+
+.quick-links ul li {
+  
+  font-size: 25px;
+}
+.quick-links ul li a {
+  color:white; /* Change this to your desired color */
+  text-decoration: none; /* Remove the underline */
+  font-weight: bold; /* Make the text bold */
+  transition: color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.quick-links ul li a:hover {
+  color: #ff6347; /* Change to your desired hover color */
+  text-decoration: underline; /* Optionally add underline on hover */
+}
+.fa-arrow-up {
+  font-size: 40px;
+  padding: 20px;
+  color:white;
+  cursor: pointer; /* Add cursor to indicate it's clickable */
+}

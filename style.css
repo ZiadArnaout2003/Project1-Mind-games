@@ -1,0 +1,46 @@
+body
+{
+  background-color: white;
+}
+.Logo
+{ 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+h1
+{
+  color: rgb(229, 229, 162);
+  font-size: 100px;
+  font-weight:150px ;
+}
+.Logo img
+{ 
+  width: 100px;
+  height: 100px;
+}
+.Suspense
+{ 
+  background-color: rgb(229, 229, 162);
+  font-size: 30px;
+  padding-top: 0.4rem;
+  padding-bottom: 0.4rem;
+  margin-right:20px;
+  margin-left: 20px;
+  margin-top:20px;
+  
+}
+.Suspense p
+{ 
+  color:rgb(110, 200, 243);
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+  font-size: 30px;
+}
+.All-games
+{
+
+}
+#footer
+{
+
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Div to Image</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: lightgray;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+
+        .box img {
+            width: 100%;
+            height: 100%;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+<div class="box" data-img="arrow.png">Click me</div>
+
+<script>
+    document.querySelector('.box').addEventListener('click', function() {
+        // Get the image URL from the data-img attribute
+        const imgSrc = this.getAttribute('data-img');
+
+        // Create an image element
+        const img = document.createElement('img');
+        img.src = imgSrc; // Use the image URL from data-img
+        img.alt = 'Clicked Image';
+
+        // Replace the div content with the image
+        this.innerHTML = '';
+        this.appendChild(img);
+
+        // Optionally add some animation
+        img.style.display = 'block';
+        img.style.opacity = 0;
+        img.style.transition = 'opacity 0.5s ease-in-out';
+        
+        setTimeout(() => {
+            img.style.opacity = 1;
+        }, 10);
+    });
+</script>
+
+</body>
+</html>
