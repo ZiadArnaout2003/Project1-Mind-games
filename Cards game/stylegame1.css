@@ -1,6 +1,12 @@
 body
 {
-  background-color: white;
+  background-color: #fff;
+}
+h1{
+  color: rgb(229, 229, 162);
+  font-size: 100px;
+  font-weight: 30px;
+  text-decoration:underline;
 }
 .Logo
 { 
@@ -8,20 +14,90 @@ body
   align-items: center;
   justify-content: center;
 }
-h1
+.Game-comment-section a
 {
-  color: rgb(229, 229, 162);
-  font-size: 100px;
+  text-decoration: none;
+  color: rgb(229, 200, 162);
+  font-size: 80px;
+  font-weight: 30px;
+  -webkit-text-stroke: 1px #000;
+}
+.Game-comment-section a:hover
+{
+  color: #ff6347;
+  cursor: pointer;
+}
+.Game-comment-section aside p
+{
+  color: #000;
+  font-size: 25px;
   font-weight:150px ;
 }
 /* End of Header */
-.Game-comment-section
-{
+.Game-comment-section 
+{ 
   display: flex;
   justify-content:center;
   align-items: stretch;
   gap: 30px;
   margin: 20px;
+  position:relative;
+}
+
+.Highlight{
+    color:rgb(229, 200, 162);
+    font-size: 40px;
+    font-weight: 30px;
+    transition:'all 0.7s ease-out';
+}
+.SettingsDiv{
+  width:800px;
+  height:500px;
+  border:3px solid;
+  z-index:1;
+  position:absolute;
+  top:30px;
+  left:400px;
+  background-color:#fff;
+  border-radius: 10px;
+}
+.SettingsDiv input
+{
+  border-style: none;
+  font-size: 30px;
+  margin-left:30px;
+}
+.SettingsDiv form 
+{ color: rgb(229, 229, 162);
+  font-size: 30px;
+  font-weight:800px ;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  margin: 20px 20px;
+}
+
+.SettingsDiv select
+{
+  border-style: none;
+  font-size: 30px;
+  margin-left:30px;
+}
+.SettingsDiv button
+{
+  background-color: rgb(229, 229, 162);
+  border-radius: 10px;
+  border-style: none;
+  font-size: 30px;
+  font-weight:150px ;
+  position: absolute;
+  width: 100%;
+  top:425px;
+  left: 0px;
+  color: #fff;
+  padding: 20px;
+  cursor: pointer;
+  
 }
 /* Description */
 .description h2
@@ -33,6 +109,17 @@ h1
 .description p
 { font-size: 30px;
   color: rgb(229, 229, 162);
+  font-weight: bold;
+}
+.description ul
+{ display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  color: rgb(229, 229, 162);
+  font-size: 30px;
+  list-style: none;
+  margin-left: 45px;
+  margin-right: 180px;
 }
 /* GRID */
 .grid
@@ -41,7 +128,7 @@ h1
   grid-template-columns:repeat(4, 150px);
   grid-template-rows: repeat(4, 150px);    
   grid-gap: 10px;
- 
+  position:relative;
 }
 .grid>div
 {
@@ -56,7 +143,6 @@ aside
 {   
     background-color:rgb(229, 200, 162); 
     padding: 10px;
-    
 }
 footer {
   height: 100px;

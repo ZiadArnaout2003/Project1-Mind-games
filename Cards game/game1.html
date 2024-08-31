@@ -39,11 +39,24 @@
       <div class="description">
         <h2>Cards matching game</h2>
         <p>
-          Enjoy this 2 players game with different themes and see who has a
-          better short-term memory
-        </p>
-      </div>
-      <div class="Game-comment-section">
+          Enjoy this 2 players game with different themes  </p>
+          <p> Let's see who has a better short-term memory! </p>
+        </div>
+      <div class="Game-comment-section" id="Game-comment-section">
+        <div class="SettingsDiv">
+        <form id="myForm">
+          <label >Player 1 name   <input id="Player1-Name" type="text" name="player1-name" placeholder="Enter your name..." required></label><br>
+          <label >Player 2 name   <input id="Player2-Name" type="text" name="player2-name" placeholder="Enter your name..."required></label><br>
+          <div class="Levels">
+            <label for="level">Select Level:</label>
+            <select id="level" name="level">
+                <option value="easy">Easy</option>
+                <option value="medium">Medium</option>
+                <option value="hard">Hard</option>
+            </select>
+        </div><br>
+          <button type="submit">Start playing</button> 
+        </form></div>
       <div class="grid">
         <div class="box" ></div>
         <div class="box"></div>
@@ -62,20 +75,20 @@
         <div class="box"></div>
         <div class="box"></div>
       </div>
-      <aside>
-        <h3>Comment Section</h3>
-        <form>
+      <aside id="Comment-Section">
+        <h3 >Comment Section</h3>
+        <form id="CommentForm">
           <label>
             <input
               type="text"
+              id="evaluation"
               placeholder="Write your evaluation here"
-              name="evaluation"
-            />
+              name="evaluation"/>
           </label>
           <button>Submit</button>
         </form>
       </aside>
-    </div>
+      </div>
     </main>
     <footer>
         <div class="quick-links">
