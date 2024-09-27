@@ -1,0 +1,15 @@
+:root{
+    --red-color:rgb(255, 89, 0);
+    --yellow-color:rgb(229,229,162);
+    --brownish-color:rgb(229,200,162);
+}
+body{
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    grid-template-rows: repeat(12,1fr);
+    height: 100vh;
+}
+#title{
+    color:var(--brownish-color) ;
+    grid-area:1/6/2/4;
+}
