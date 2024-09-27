@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TIC-TAC-TOE</title>
+  </head>
+  <body>
+    <header>
+      <h1>Mind games</h1>
+      <hr />
+    </header>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <main class="game-body">
+      <div class="settings-window">
+        <form class="user-input" id="user-input-id">
+          <label for="Player1Name">Player 1 name:</label>
+          <input
+            placeholder="Enter the name..."
+            type="text"
+            id="Player1Name"
+            required
+          />
+          <label for="Player1Name">Player 2 name:</label
+          ><input
+            placeholder="Enter the name..."
+            type="text"
+            id="Player2Name"
+            required
+          />
+          <label for="time">Duration:</label>
+          <select id="time">
+            <option value="30" name="30-sec">20 sec</option>
+            <option value="60" name="1-min">60 sec</option>
+            <option value="120" name="2-min">120 sec</option>
+          </select>
+          <button id="myButton" type="submit">Start the game</button>
+        </form>
+      </div>
+      <div class="datadisplay"><!-- Names + Time -->
+        <div id="name1"> Player1: <span ></span></div>
+        <div id="countdown">Time: <span></span></div>
+        <div id="name2">  Player2:<span></span></div>
+      </div>
+      <div class="grid">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+      </div>
+    </main>
+    <link rel="stylesheet" href="stylegame2.css" />
+    <script src="script2.js"></script>
+    <footer>
+      <div class="quick-links">
+        <ul>
+          <li><a href="index.html">Home page</a></li>
+          <li><a href="">Contact us</a></li>
+          <li><a href="portfolio">Know more about us</a></li>
+        </ul>
+      </div>
+      <div class="comment-section-div">
+        <label for="comment-section" id="comment-section-label">Comments</label>
+        <textarea
+          placeholder="Give us your feedback..."
+          name="comment"
+          id="comment-section"
+        >
+        </textarea>
+        <button type="submit">Send</button>
+      </div>
+    </footer>
+    <a href="#"><i class="fa-solid fa-arrow-up"></i></a>
+  </body>
+</html>
