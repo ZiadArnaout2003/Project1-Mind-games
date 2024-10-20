@@ -1,6 +1,7 @@
 body
 {
   background-color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
 }
 h1{
   color: rgb(229, 229, 162);
@@ -40,7 +41,7 @@ h1{
   justify-content:center;
   align-items: stretch;
   gap: 30px;
-  margin: 20px;
+  margin: 90px;
   position:relative;
 }
 

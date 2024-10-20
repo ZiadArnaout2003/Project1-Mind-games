@@ -172,6 +172,9 @@ function checkForDraw(){
     let restart=document.createElement('button');
     GameOver_div.appendChild(restart);
     restart.innerHTML='Restart';
+    restart.addEventListener('click',()=>{
+        window.location.reload();
+    });
     restart.classList.add('Restart-btn');
  }   
 
