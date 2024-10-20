@@ -2,14 +2,191 @@
     --red-color:rgb(255, 89, 0);
     --yellow-color:rgb(229,229,162);
     --brownish-color:rgb(229,200,162);
+    --standard-font-size: 3rem;
+}
+@keyframes keyboardTranslation {
+    0%{ 
+        transform: translateX(-100px);
+    }
+    100%{
+        
+        transform: translateX(0px);
+    }
+}
+@keyframes titleAnimation {
+    0%{ opacity: 0;
+    }
+    100%{
+        
+        opacity: 1;
+    }
+}
+@keyframes PictureAnimation {
+    0%{ opacity: 1;
+        transform: translateX(100px);
+    }
+    100%{
+        
+        transform: translateX(0px);
+    }
 }
 body{
+    background-color:rgb(245,245,235);
     display: grid;
-    grid-template-columns: repeat(12,1fr);
-    grid-template-rows: repeat(12,1fr);
-    height: 100vh;
+    grid-template-columns: repeat(12,auto);
+    grid-template-rows: repeat(12,auto);
+    height: 150vh;
 }
 #title{
     color:var(--brownish-color) ;
-    grid-area:1/6/2/4;
+    grid-area:1/5/2/11;
+    font-size: 6rem;
+    text-decoration: underline;
+    opacity: 1;
+    animation: titleAnimation 2s ease-out ;
+}
+
+header{
+    color:black;
+    font-weight: bold;
+    font-size:var(--standard-font-size);
+    grid-area:2/2/3/11;
+}
+main{
+    display:flex;
+    grid-area:6/2/11/8; 
+}
+.LettersAndDashes{
+    display: flex;
+    flex-direction: column;
+    gap:3rem;
+
+}
+.Dashes-container{
+    grid-area:6/2/10/8;
+    border:10px solid var(--yellow-color) ;
+    font-size: calc(2*var(--standard-font-size));
+    border-radius :20px;
+    text-align: center;
+    animation: keyboardTranslation 1s ease-out  forwards;
+}
+.Letters-container{
+    display: flex;
+    flex-wrap: wrap;
+    grid-area:5/3/7/4;
+    gap:20px;
+    height: 100px;
+    animation: keyboardTranslation 1s ease-out forwards;
+}
+.Letters-container .letter{
+   font-size:var(--standard-font-size);
+   background-color:var(--yellow-color) ;
+   border-radius:0.5rem;
+   padding: 0.5rem;
+   box-shadow: 4px 5px 5px 2px grey;
+   cursor: pointer;
+}
+
+.HangmanPicture{
+ grid-area: 8/8/11/12;
+ width:500px;
+ margin-top: 20px;
+ margin-left: 20px;
+ animation: PictureAnimation 1s ease-out forwards;
+}
+.GameOver{
+    grid-area: 6/3/11/12;
+    text-align: center;
+    font-size: 6rem;
+    color: var(--red-color);
+    position:fixed;
+    translate: -50% -50%;
+    top:50%;
+    left:50%;
+}
+footer{
+    grid-area:11/1/12/12;
+    background-color: var(--brownish-color);
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top:200px;
+}
+footer ul{
+    list-style: none;
+    display: flex;
+}
+footer li{
+    margin:10px;
+    padding: 20px;
+    font-size:var(--standard-font-size);
+    font-weight: bold;
+}
+footer a{
+color:white;
+text-decoration: none;
+}
+.quick-links ul li a:hover {
+    color: var(--brownish-color); /* Change to your desired hover color */
+    text-decoration: underline; /* Optionally add underline on hover */
+  }
+  footer textarea{
+    width:400px;
+    height :200px;
+    padding:10px;
+    border-radius: 10px;
+    font-size: var(--standard-font-size);
+  }
+  .comment-section-div{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    margin-right: 20px;
+  }
+  #comment-section-label
+  { margin-left:0px;
+    margin-right: 200px;
+    font-weight: bold;
+    font-size:var(--standard-font-size);
+    color:white;
+  }
+  .comment-section-div button{
+    width: 100px;
+    height: 40px;
+    font-size:var(--standard-font-size)-2rem;
+    border-radius: 10px;
+    background-color: var(--yellow-color);
+    color: white;
+    border:none;
+    margin-top: 20px;
+    cursor: pointer;
+  }
+.fa-arrow-up{
+    position:fixed;
+    bottom:0;
+    right:10px;
+    border-radius: 50%;
+    background-color: var(--yellow-color);
+    color: white;
+    padding: 10px;
+    font-size: var(--standard-font-size);
+}
+.confirmation-message {
+    position: fixed;
+    left: 30%;
+    color: lightgreen;
+    background-color: white;
+    padding: 10px;
+    margin-top: 10px;
+    display: none;
+    font-size: var(--standard-font-size);
+    transition: display 0.5s ease ;
+}
+
+.confirmation-message.show {
+    display: block;
+}
+.not-clickable{
+    pointer-events: none;
 }
