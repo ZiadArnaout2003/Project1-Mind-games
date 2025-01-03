@@ -15,27 +15,52 @@
     <meta property="og:url" content="">
     <meta property="og:type" content="">
     <title>Cards matching</title>
-    <!--CSS-->
-    <link rel="stylesheet" href="style.css" />
-    
-    <script></script>
   </head>
   <body>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
     <header class="Logo">
       <h1>Mind games</h1>
     </header>
     <hr />
-    <div class="Suspense">
+    <div class="Suspense fade-up ">
       <p>Ready for the fight ?!</p>
-      <p>Find your teammate and start earning points !!</p>
+      <p>Find your teammate and enjoy the games on your terms !!</p>
+      <p>Enter your name and specify the time limit to see who can think faster !! </p>
     </div>
-
-    <main class="All-games">
-     <div id="game1"><a href="game1.html" target="_blank" ></a>Tic-tac-toe</div>
-     <div id="game2"><a href="game2.html" target="_blank" ></a>Cards matching</div>
-     <div id="game3"><a href="game3.html" target="_blank" ></a>Guess the word</div>
-     <div id="game4"><a href="game4.html" target="_blank" ></a>Othello</div>
+    <main class="All-games fade-up">
+      <div id="game1"><a href="game1.html" target="_blank" ></a>Tic-tac-toe</div>
+      <div id="game2"><a href="game2.html" target="_blank" ></a>Cards matching</div>
+      <div id="game3"><a href="game3.html" target="_blank" ></a>Guess the word</div>
     </main>
-    <footer id="footer">All copyrights preserved #@copy</footer>
+    <footer>
+      <div class="quick-links">
+        <ul>
+          <li><a href="index.html">Home page</a></li>
+          <li><a href="">Contact us</a></li>
+          <li><a href="portfolio">Know more about us</a></li>
+        </ul>
+      </div>
+      <div class="comment-section-div">
+        <label for="comment-section" id="comment-section-label">Comments</label>
+        <textarea
+          placeholder="Give us your feedback..."
+          name="comment"
+          id="comment-section"
+        >
+        </textarea>
+        <button type="submit">Send</button>
+      </div>
+    </footer>
+    <a href="#"><i class="fa-solid fa-arrow-up"></i></a>
+    <!--CSS-->
+    <link rel="stylesheet" href="style.css" />
+    
+    <script src="scrpit_homepage.js"></script>
   </body>
 </html>

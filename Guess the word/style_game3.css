@@ -2,7 +2,7 @@
     --red-color:rgb(255, 89, 0);
     --yellow-color:rgb(229,229,162);
     --brownish-color:rgb(229,200,162);
-    --standard-font-size: 3rem;
+    --standard-font-size: 2rem;
 }
 @keyframes keyboardTranslation {
     0%{ 
@@ -31,18 +31,17 @@
     }
 }
 body{
-    background-color:rgb(245,245,235);
     display: grid;
-    grid-template-columns: repeat(12,auto);
-    grid-template-rows: repeat(12,auto);
+    background-color: white;
+    font-family: Arial, Helvetica, sans-serif;
     height: 150vh;
 }
 #title{
     color:var(--brownish-color) ;
-    grid-area:1/5/2/11;
-    font-size: 6rem;
+    font-size: 5rem;
     text-decoration: underline;
     opacity: 1;
+    margin: auto;
     animation: titleAnimation 2s ease-out ;
 }
 
@@ -50,11 +49,9 @@ header{
     color:black;
     font-weight: bold;
     font-size:var(--standard-font-size);
-    grid-area:2/2/3/11;
 }
 main{
     display:flex;
-    grid-area:6/2/11/8; 
 }
 .LettersAndDashes{
     display: flex;
@@ -63,17 +60,17 @@ main{
 
 }
 .Dashes-container{
-    grid-area:6/2/10/8;
+    grid-area:6/2/10/12;
     border:10px solid var(--yellow-color) ;
     font-size: calc(2*var(--standard-font-size));
     border-radius :20px;
     text-align: center;
+    height: 300px;
     animation: keyboardTranslation 1s ease-out  forwards;
 }
 .Letters-container{
     display: flex;
     flex-wrap: wrap;
-    grid-area:5/3/7/4;
     gap:20px;
     height: 100px;
     animation: keyboardTranslation 1s ease-out forwards;
@@ -88,14 +85,14 @@ main{
 }
 
 .HangmanPicture{
- grid-area: 8/8/11/12;
+ 
  width:500px;
  margin-top: 20px;
  margin-left: 20px;
  animation: PictureAnimation 1s ease-out forwards;
 }
 .GameOver{
-    grid-area: 6/3/11/12;
+    
     text-align: center;
     font-size: 6rem;
     color: var(--red-color);
@@ -105,7 +102,7 @@ main{
     left:50%;
 }
 footer{
-    grid-area:11/1/12/12;
+    
     background-color: var(--brownish-color);
     text-align: center;
     display: flex;

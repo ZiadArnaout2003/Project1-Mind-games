@@ -57,13 +57,14 @@ function updateDashes(dashArray, letterMap, guessedLetter) {
 function updateHTML(dashArray) {
     const wordContainer = document.getElementById("Dashes-container");
     wordContainer.textContent = dashArray.join(" ");  // Display dashes/letters separated by spaces
+                                                     // But dashArray didn't change
 }
 function GameInitialisation(word){
     letterMap = createLetterMap(word);
     dashArray = initializeDashes(word);
     updateHTML(dashArray);
 }
-GameInitialisation('kristinhannah');
+GameInitialisation('lunettes');
 // Event of clicking on a letter
 // Convert HTMLCollection to an array using Array.from or spread operator
 Array.from(document.getElementsByClassName('letter')).forEach(letterElement => {

@@ -11,7 +11,7 @@ let Myform=document.getElementById("user-input-id");
 let X_path='X.png';
 let O_path='O.png';
 let Player1,Player2,match=false,draw=false;
-let timerValue=20;
+let timerValue=30;
 let ArrayOfBoxes=Array.from(document.querySelectorAll('.box'));
 let TwoDim_ArrayOfBoxes = [],row,column;
 
