@@ -1,3 +1,14 @@
+@keyframes fade-in {
+  0%{
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 :root{
   --yellow-color:rgb(229, 229, 162);
   --brownish-color:rgb(229, 200, 162);
@@ -31,51 +42,58 @@ h1
 .Suspense
 { display:flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   margin-top: 20px;
-  width: 50%;
-  margin-inline: auto;
-  background-color: var( --yellow-color);
+  width: auto;
   font-size: 30px;
   border-radius: 1rem;
   border: 1px sloid var(--brownish-color);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 
-  0 10px 15px rgba(0, 0, 0, 0.1), 
-  0 20px 25px rgba(0, 0, 0, 0.1);
+  animation:fade-in 3s linear ease ;
 }
 .Suspense p
 { 
-  color:black;;
+  color:gray;
   font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
   font-size: 30px;
 
 }
 .All-games
 { 
-  display: grid;
-  gap: 1rem;
-  width: 75%;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  width: 80%;
   height: 50vh;
-  grid-template-columns: repeat(2,1fr);
   font-size: large;
-  margin-top: 2rem;
-  margin-inline: auto;
-  /* border: 1px solid var(--brownish-color); */
-  background-color: transparent;
+  margin: 2rem 0 2rem 6rem;
+  animation:fade-in 3s linear ease ;
 }
 .All-games > div
 { font-size: 2rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-right: 1px solid var(--brownish-color);
+  flex-direction: column;
   cursor: pointer;
+  width:calc(100%/3);
   border-radius: 1rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 
   0 10px 15px rgba(0, 0, 0, 0.1), 
   0 20px 25px rgba(0, 0, 0, 0.1);
   
+}
+.All-games > div span
+{ 
+  color: white;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+.All-games > div img
+{ 
+  width: 14rem;
+  height: 14rem;
+  border-radius: 1rem;
 }
 .All-games>:nth-child(1)
 {
@@ -87,7 +105,7 @@ h1
 }
 .All-games>:nth-child(3)
 { 
-  transform: translateX(50%);
+  
   background-color: var(--yellow-color);
 }
 
@@ -159,14 +177,4 @@ footer textarea{
   padding: 20px;
   font-size: var(--big-font-size);
 }
-/* Fade in transition  */
-.fade-up {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-}
 
-.fade-up.visible {
-  opacity: 1;
-  transform: translateY(0);
-}

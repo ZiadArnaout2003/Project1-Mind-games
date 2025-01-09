@@ -64,7 +64,7 @@ function GameInitialisation(word){
     dashArray = initializeDashes(word);
     updateHTML(dashArray);
 }
-GameInitialisation('lunettes');
+GameInitialisation('guesstheword');
 // Event of clicking on a letter
 // Convert HTMLCollection to an array using Array.from or spread operator
 Array.from(document.getElementsByClassName('letter')).forEach(letterElement => {
