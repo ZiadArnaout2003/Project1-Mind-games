@@ -46,9 +46,10 @@ body{
 }
 
 header{
-    color:black;
+    color:rgb(49, 46, 46);
     font-weight: bold;
     font-size:var(--standard-font-size);
+
 }
 main{
     display:flex;
