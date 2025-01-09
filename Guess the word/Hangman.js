@@ -64,7 +64,18 @@ function GameInitialisation(word){
     dashArray = initializeDashes(word);
     updateHTML(dashArray);
 }
-GameInitialisation('guesstheword');
+async function getWordInRange(minLength, maxLength) {
+    while (true) {
+        const length = Math.floor(Math.random() * (maxLength - minLength + 1)) + minLength; // Random length in range
+        const response = await fetch(`https://random-word-api.herokuapp.com/word?number=1&length=${length}`);
+        const words = await response.json();
+        if (words && words.length > 0) {
+            return words[0]; // Return the first word
+        }
+    }
+}
+
+GameInitialisation(getWordInRange(5,12));
 // Event of clicking on a letter
 // Convert HTMLCollection to an array using Array.from or spread operator
 Array.from(document.getElementsByClassName('letter')).forEach(letterElement => {
