@@ -64,18 +64,45 @@ function GameInitialisation(word){
     dashArray = initializeDashes(word);
     updateHTML(dashArray);
 }
-async function getWordInRange(minLength, maxLength) {
-    while (true) {
-        const length = Math.floor(Math.random() * (maxLength - minLength + 1)) + minLength; // Random length in range
-        const response = await fetch(`https://random-word-api.herokuapp.com/word?number=1&length=${length}`);
-        const words = await response.json();
-        if (words && words.length > 0) {
-            return words[0]; // Return the first word
-        }
-    }
-}
+const words = [
+    // 5-letter words
+    "apple", "beach", "crowd", "dance", "eagle", "fable", "grape", "horse", "image", "jolly",
+    "karma", "lemon", "magic", "novel", "oasis", "peace", "quest", "raven", "sugar", "tiger",
+    "union", "valor", "witty", "zebra", "brave",
+  
+    // 6-letter words
+    "bright", "camera", "danger", "energy", "frozen", "galaxy", "hidden", "island", "jewel", "kitten",
+    "leader", "magnet", "nature", "object", "palace", "random", "rocket", "stream", "tunnel", "vessel",
+    "wealth", "yellow", "zenith", "garden", "sister",
+  
+    // 7-letter words
+    "admiral", "balloon", "captain", "diamond", "elastic", "freedom", "glacier", "harvest", "inspire", "journey",
+    "kingdom", "library", "musical", "novelty", "optical", "pioneer", "quality", "rescue", "sunrise", "tribute",
+    "upwards", "vintage", "warrior", "zealous", "progress",
+  
+    // 8-letter words
+    "airplane", "building", "chemical", "dominion", "elephant", "favorite", "gigantic", "hospital", "illusion", "junction",
+    "lifestyle", "magician", "narrator", "operator", "passport", "quandary", "reliable", "sapphire", "teammate", "umbrella",
+    "vocation", "workshop", "zealotry", "backpack", "landmark",
+  
+    // 9-letter words
+    "adventure", "beautiful", "childhood", "dedicated", "education", "fireplace", "generator", "honeymoon", "injection", "landscape",
+    "nightmare", "overthrow", "paradise", "radiation", "satellite", "threshold", "undertake", "vibration", "wonderful", "zealously",
+  
+    // 10-letter words
+    "appearance", "breakfast", "caterpillar", "destination", "entertain", "foundation", "greenhouse", "hypnotized", "invitation", "landlocked",
+    "motivating", "negotiable", "organizing", "particular", "questioned", "revolution", "subtraction", "toleration", "unfaithful", "ventilator",
+  
+    // 11-letter words
+    "anniversary", "breathtaking", "confidential", "destruction", "entertainment", "fascination", "grandfather", "heartwarming", "investigate", "landscaping",
+    "masterpiece", "nourishment", "organization", "participated", "qualification", "reproduction", "significant", "transported", "unbreakable", "victorious",
+  
+    // 12-letter words
+    "accomplished", "appreciation", "breakthrough", "collaboration", "determination", "environmental", "grandchildren", "incorporation", "justification", "knowledgeable",
+    "manifestation", "notification", "overshadowing", "preoccupation", "quantification", "reconfiguration", "sophisticated", "transportation", "understanding", "verification",
+  ];
 
-GameInitialisation(getWordInRange(5,12));
+GameInitialisation(words[Math.floor(Math.random() * words.length)]);
 // Event of clicking on a letter
 // Convert HTMLCollection to an array using Array.from or spread operator
 Array.from(document.getElementsByClassName('letter')).forEach(letterElement => {
