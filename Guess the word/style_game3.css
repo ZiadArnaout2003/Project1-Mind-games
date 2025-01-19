@@ -168,7 +168,7 @@ text-decoration: none;
     background-color: var(--yellow-color);
     color: white;
     padding: 10px;
-    font-size: var(--standard-font-size);
+    font-size: 30px;
 }
 .confirmation-message {
     position: fixed;
@@ -188,3 +188,13 @@ text-decoration: none;
 .not-clickable{
     pointer-events: none;
 }
+.fa-house{
+    position:fixed;
+    bottom:0;
+    left:10px;
+    border-radius: 50%;
+    background-color: var(--brownish-color);
+    color: white;
+    padding: 20px;
+    font-size: 30px;
+  }

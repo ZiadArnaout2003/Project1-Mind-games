@@ -217,3 +217,13 @@ text-decoration: none;
 .not-clickable{
 pointer-events: none;
 }
+.fa-house{
+  position:fixed;
+  bottom:0;
+  left:10px;
+  border-radius: 50%;
+  background-color: var(--brownish-color);
+  color: white;
+  padding: 20px;
+  font-size: var(--big-font-size);
+}

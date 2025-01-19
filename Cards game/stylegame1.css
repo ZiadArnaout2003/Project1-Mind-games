@@ -145,41 +145,26 @@ aside
     background-color:rgb(229, 200, 162); 
     padding: 10px;
 }
-footer {
-  margin-top: 30px;
-  height: 100px;
-  background-color: rgb(229, 200, 162);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
 
-.quick-links ul {
-  display: flex;
-  gap: 20px; /* Use gap to control spacing between items */
-  list-style-type: none;
-  /* margin: 0; Remove default margin */
-  /* padding: 0; Remove default padding */
-}
-
-.quick-links ul li {
-  
-  font-size: 25px;
-}
-.quick-links ul li a {
-  color:white; /* Change this to your desired color */
-  text-decoration: none; /* Remove the underline */
-  font-weight: bold; /* Make the text bold */
-  transition: color 0.3s ease; /* Smooth transition for hover effect */
-}
-
-.quick-links ul li a:hover {
-  color: #ff6347; /* Change to your desired hover color */
-  text-decoration: underline; /* Optionally add underline on hover */
-}
 .fa-arrow-up {
-  font-size: 40px;
+  position: fixed;
+  bottom: 0;
+  right: 10px;
   padding: 20px;
   color:white;
+  font-size: 30px;
+  background-color: rgb(229,229,162);
+  border-radius: 50%;
   cursor: pointer; /* Add cursor to indicate it's clickable */
+}
+.fa-house{
+  font-size: 30px;
+  position:fixed;
+  bottom:0;
+  left:10px;
+  border-radius: 50%;
+  background-color: rgb(229,200,162);
+  color: white;
+  padding: 20px;
+ 
 }
